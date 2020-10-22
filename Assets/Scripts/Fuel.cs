@@ -4,22 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Fuil : MonoBehaviour
+public class Fuel : MonoBehaviour
 {
-    public int Fuils = 3;
+    public int Fuels = 3;
 
     void Start() {
 
     }
 
-    public void AddFuil() {
-        Fuils++;
+    public void AddFuel() {
+        Fuels++;
     }
 
-    public void LostFuil() {
-        Fuils--;
+    public void LostFuel() {
+        Fuels--;
 
-        if (Fuils <= 0) {
+        if (Fuels <= 0) {
             SceneManager.LoadScene("GameOver");
         }
     }
