@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 3101479948231681885}
   - component: {fileID: 3101479948231681882}
   - component: {fileID: 3101479948231681697}
+  - component: {fileID: 9047303206805426119}
   m_Layer: 13
   m_Name: MonsterBlue
   m_TagString: Untagged
@@ -410,6 +411,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Direction: {x: 0, y: 0, z: -1}
   Speed: 10
+--- !u!54 &9047303206805426119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101479948231681883}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 118
+  m_CollisionDetection: 0
 --- !u!1 &3101479948323874460
 GameObject:
   m_ObjectHideFlags: 0
