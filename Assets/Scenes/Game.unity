@@ -2267,6 +2267,16 @@ PrefabInstance:
       propertyPath: TxtFuels
       value: 
       objectReference: {fileID: 1374301726}
+    - target: {fileID: 5609888856912193004, guid: 9486f485a6d791243a2bf6cc7383cfef,
+        type: 3}
+      propertyPath: RespondTo.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609888856912193004, guid: 9486f485a6d791243a2bf6cc7383cfef,
+        type: 3}
+      propertyPath: CollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9486f485a6d791243a2bf6cc7383cfef, type: 3}
 --- !u!1001 &2952363012431216370
