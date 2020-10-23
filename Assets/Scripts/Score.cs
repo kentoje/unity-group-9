@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
     }
 
     void Update() {
-        InvokeRepeating("UpdateScore", 0.1f, 1.0f);
+        InvokeRepeating("UpdateScore", 0.1f, 5.0f);
     }
     
     void UpdateScore() {
