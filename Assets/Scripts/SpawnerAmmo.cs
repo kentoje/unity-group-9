@@ -14,9 +14,14 @@ public class SpawnerAmmo : MonoBehaviour
 
     public bool IsFire = false;
 
+    public int timeFireBonus = 5;
+
     public void Fire() {
         IsFire = true;
-        new WaitForSeconds(3);
+        Invoke("OffFire", timeFireBonus);
+    }
+
+    void OffFire() {
         IsFire = false;
     }
 
