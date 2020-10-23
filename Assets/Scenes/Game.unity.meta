@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: e6140ed933ba3bb4aab17740771ff43c
+<<<<<<< HEAD:Assets/Scenes/Backgroundv2.unity.meta
+guid: 75feb8d6943100949850597dfec90078
+=======
+guid: 03f4328fb1e4aa349b12e81fa6c12a2d
+>>>>>>> feat/decor:Assets/Scenes/frontgound.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
