@@ -5,5 +5,4 @@ using UnityEngine;
 public class Global : MonoBehaviour
 {
     public float Speed = 10;
-
 }

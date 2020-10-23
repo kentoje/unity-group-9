@@ -8,18 +8,25 @@ public class Fuel : MonoBehaviour
 {
     public int Fuels = 3;
 
-    void Start() {
+    void Start()
+    {
 
     }
 
-    public void AddFuel() {
+    public void AddFuel()
+    {
         Fuels++;
+        Debug.Log(Fuels);
+
     }
 
-    public void LostFuel() {
+    public void LoseFuel()
+    {
         Fuels--;
+        Debug.Log(Fuels);
 
-        if (Fuels <= 0) {
+        if (Fuels <= 0)
+        {
             SceneManager.LoadScene("GameOver");
         }
     }

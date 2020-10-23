@@ -1,0 +1,31 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnerParTriggerLeave : MonoBehaviour
+{
+    public GameObject[] ObjPrefabs;
+
+    public int Min = -1;
+    public int Max = 3;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        SpawnPrefab();
+    }
+
+    public void SpawnPrefab()
+    {
+        int index = Random.Range(0, ObjPrefabs.Length);
+
+        GameObject spawnee = GameObject.Instantiate(ObjPrefabs[index]);
+
+        Vector3 spawnerPos = transform.position;
+
+        spawnerPos.x += Random.Range(Min, Max);
+
+        spawnee.transform.position = spawnerPos;
+
+    }
+}
