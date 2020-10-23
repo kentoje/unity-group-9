@@ -30,7 +30,6 @@ public class Fuel : MonoBehaviour
         }
         if (Fuels <= 0)
         {
-            Debug.Log("Les connard");
             SceneManager.LoadScene("GameOver");
         }
     }
