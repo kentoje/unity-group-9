@@ -11,6 +11,8 @@ public class CarMove : MonoBehaviour
     public float JumpFactor = 1;
     bool IsJumping = false;
 
+    public float RotateSpeed  = 1;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,8 +23,10 @@ public class CarMove : MonoBehaviour
         float horVal = Input.GetAxis("Horizontal");
 
         Vector3 posArrivee = transform.position + (Vector3.right * Speed * Time.deltaTime * horVal);
-        Debug.Log(posArrivee);
         rb.MovePosition(posArrivee);
+
+        float angle = 30 * horVal;
+        transform.localEulerAngles = new Vector3(0, angle, 0);
 
         float jumpVal = Input.GetAxis("Jump");
         if (!IsJumping && jumpVal > 0.1f) {
