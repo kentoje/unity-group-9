@@ -7,23 +7,24 @@ using UnityEngine.SceneManagement;
 public class Fuel : MonoBehaviour
 {
     public int Fuels = 3;
+    public Text TxtFuels;
 
     void Start()
     {
-
+        TxtFuels.text = "Fuels: " + Fuels;
     }
 
     public void AddFuel()
     {
         Fuels++;
-        Debug.Log(Fuels);
+        TxtFuels.text = "Fuels: " + Fuels;
 
     }
 
     public void LoseFuel()
     {
         Fuels--;
-        Debug.Log(Fuels);
+        TxtFuels.text = "Fuels: " + Fuels;
 
         if (Fuels <= 0)
         {
