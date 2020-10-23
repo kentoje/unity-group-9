@@ -7,22 +7,21 @@ public class CarMove : MonoBehaviour
     public float Speed = 1;
     
     Rigidbody rb;
-
-    public float JumpFactor = 10f;
-    bool IsJumping = false;
     
-    // Start is called before the first frame update
+    public float JumpFactor = 1;
+    bool IsJumping = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float horVal = Input.GetAxis("Horizontal");
-        
+
         Vector3 posArrivee = transform.position + (Vector3.right * Speed * Time.deltaTime * horVal);
+        Debug.Log(posArrivee);
         rb.MovePosition(posArrivee);
 
         float jumpVal = Input.GetAxis("Jump");
@@ -30,9 +29,11 @@ public class CarMove : MonoBehaviour
             IsJumping = true;
             rb.AddForce(Vector3.up * JumpFactor, ForceMode.VelocityChange);
         }
+
     }
 
     public void HitGround() {
         IsJumping = false;
     }
+
 }
