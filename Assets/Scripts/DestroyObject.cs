@@ -2,20 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyObject : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	public void DoDestroy()
-	{
-		Destroy(gameObject);
-	}
+public class DestroyObject : MonoBehaviour
+{
+    public void DestroyOther(GameObject obj) {
+        GameObject.Destroy(obj);
+    }
 }
+
