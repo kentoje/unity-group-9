@@ -4,35 +4,33 @@ using UnityEngine;
 
 public class Invincible : MonoBehaviour
 {
+    public float Intervalle = 0.1f;
+    float TempsPasse = 0;
+    public int InvincibleTime = 5;
 
-  public float Duree = 5;
+    bool IsInvincible = false;
 
-  bool IsInvincible = false;
+    float EnCours;
 
-  float EnCours;
-
-  Collider CarCollider;
-
-  // Start is called before the first frame update
-  void Start()
-  {
-    CarCollider = GetComponent<Collider>();
-  }
-
-  public void GetInvincible()
-  {
-    if (!IsInvincible)
+    void Update()
     {
-      IsInvincible = true;
-      CarCollider.enabled = !CarCollider.enabled;
-      Debug.Log("Collider.enabled = " + CarCollider.enabled);
+        TempsPasse += Time.deltaTime;
 
-      Invoke("ResetInvicible", Duree);
+        if (TempsPasse > Intervalle && IsInvincible)
+        {
+            gameObject.layer = LayerMask.NameToLayer("CarInvincible");
+        }
     }
-  }
 
-  void ResetInvicible()
-  {
-    IsInvincible = false;
-  }
+    public void GetInvincible(GameObject obj)
+    {
+        IsInvincible = true;
+        Invoke("ResetInvicible", InvincibleTime);
+    }
+
+    void ResetInvicible()
+    {
+        IsInvincible = false;
+        gameObject.layer = LayerMask.NameToLayer("Car");
+    }
 }

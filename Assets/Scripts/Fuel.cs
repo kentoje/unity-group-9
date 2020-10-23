@@ -9,6 +9,7 @@ public class Fuel : MonoBehaviour
     public int Fuels = 3;
     public Text TxtFuels;
 
+    //   public GameObject Car;
     void Start()
     {
         TxtFuels.text = "Fuels: " + Fuels;
@@ -18,14 +19,15 @@ public class Fuel : MonoBehaviour
     {
         Fuels++;
         TxtFuels.text = "Fuels: " + Fuels;
-
     }
 
-    public void LoseFuel()
+    public void LoseFuel(GameObject obj)
     {
-        Fuels--;
-        TxtFuels.text = "Fuels: " + Fuels;
-
+        if (LayerMask.LayerToName(obj.layer) == "Car")
+        {
+            Fuels--;
+            TxtFuels.text = "Fuels: " + Fuels;
+        }
         if (Fuels <= 0)
         {
             SceneManager.LoadScene("GameOver");
